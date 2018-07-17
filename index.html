@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>SudokuGen</title>
+  <meta name="description" content="Creates and Solves Sudoku Puzzles">
+  <meta name="author" content="Andrew McLaughlin">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--JS-->
+  <script src="js/main.js"></script>
+
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row center">
+      <div class="one-half column " >
+        <h3>SudokuGen</h3>
+      </div>
+    </div>
+    <div class="row center">
+      <div class="six columns">
+        <div class="puzzleLocation ">
+          <div class="puzzleRow">
+          <input type="text" class="row1 column1 box1" maxlength="1" pattern="[1-9]" value="3">
+          <input type="text" class="row1 column2 box1" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row1 column3 box1" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row1 column4 box2" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row1 column5 box2" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row1 column6 box2" maxlength="1" pattern="[1-9]" value="2">
+          <input type="text" class="row1 column7 box3" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row1 column8 box3" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row1 column9 box3" maxlength="1" pattern="[1-9]" value="1">
+          </div>
+          <div class="puzzleRow">
+          <input type="text" class="row2 column1 box1" maxlength="1" pattern="[1-9]" value="1">
+          <input type="text" class="row2 column2 box1" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row2 column3 box1" maxlength="1" pattern="[1-9]" value="7">
+          <input type="text" class="row2 column4 box2" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row2 column5 box2" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row2 column6 box2" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row2 column7 box3" maxlength="1" pattern="[1-9]" value="9">
+          <input type="text" class="row2 column8 box3" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row2 column9 box3" maxlength="1" pattern="[1-9]">
+          </div>
+          <div class="puzzleRow">
+
+          <input type="text" class="row3 column1 box1" maxlength="1" pattern="[1-9]" value="6">
+          <input type="text" class="row3 column2 box1" maxlength="1" pattern="[1-9]" value="8">
+          <input type="text" class="row3 column3 box1" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row3 column4 box2" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row3 column5 box2" maxlength="1" pattern="[1-9]" value="7">
+          <input type="text" class="row3 column6 box2" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row3 column7 box3" maxlength="1" pattern="[1-9]" value="3">
+          <input type="text" class="row3 column8 box3" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row3 column9 box3" maxlength="1" pattern="[1-9]" value="2">
+        </div>
+        <div class="puzzleRow">
+          <input type="text" class="row4 column1 box4" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row4 column2 box4" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row4 column3 box4" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row4 column4 box5" maxlength="1" pattern="[1-9]" value="5">
+          <input type="text" class="row4 column5 box5" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row4 column6 box5" maxlength="1" pattern="[1-9]" value="6">
+          <input type="text" class="row4 column7 box6" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row4 column8 box6" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row4 column9 box6" maxlength="1" pattern="[1-9]" value="9">
+        </div>
+        <div class="puzzleRow">
+          <input type="text" class="row5 column1 box4" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row5 column2 box4" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row5 column3 box4" maxlength="1" pattern="[1-9]" value="8">
+          <input type="text" class="row5 column4 box5" maxlength="1" pattern="[1-9]" value="2">
+          <input type="text" class="row5 column5 box5" maxlength="1" pattern="[1-9]" value="1">
+          <input type="text" class="row5 column6 box5" maxlength="1" pattern="[1-9]" value="7">
+          <input type="text" class="row5 column7 box6" maxlength="1" pattern="[1-9]" value="4">
+          <input type="text" class="row5 column8 box6" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row5 column9 box6" maxlength="1" pattern="[1-9]">
+        </div>
+        <div class="puzzleRow">
+          <input type="text" class="row6 column1 box4" maxlength="1" pattern="[1-9]" value="2">
+          <input type="text" class="row6 column2 box4" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row6 column3 box4" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row6 column4 box5" maxlength="1" pattern="[1-9]" value="3">
+          <input type="text" class="row6 column5 box5" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row6 column6 box5" maxlength="1" pattern="[1-9]" value="4">
+          <input type="text" class="row6 column7 box6" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row6 column8 box6" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row6 column9 box6" maxlength="1" pattern="[1-9]">
+        </div>
+        <div class="puzzleRow">
+          <input type="text" class="row7 column1 box7" maxlength="1" pattern="[1-9]" value="5">
+          <input type="text" class="row7 column2 box7" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row7 column3 box7" maxlength="1" pattern="[1-9]" value="2">
+          <input type="text" class="row7 column4 box8" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row7 column5 box8" maxlength="1" pattern="[1-9]" value="3">
+          <input type="text" class="row7 column6 box8" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row7 column7 box9" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row7 column8 box9" maxlength="1" pattern="[1-9]" value="8">
+          <input type="text" class="row7 column9 box9" maxlength="1" pattern="[1-9]" value="7">
+        </div>
+        <div class="puzzleRow">
+          <input type="text" class="row8 column1 box7" maxlength="1" pattern="[1-9]" >
+          <input type="text" class="row8 column2 box7" maxlength="1" pattern="[1-9]" >
+          <input type="text" class="row8 column3 box7" maxlength="1" pattern="[1-9]" value="1">
+          <input type="text" class="row8 column4 box8" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row8 column5 box8" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row8 column6 box8" maxlength="1" pattern="[1-9]" >
+          <input type="text" class="row8 column7 box9" maxlength="1" pattern="[1-9]" value="2">
+          <input type="text" class="row8 column8 box9" maxlength="1" pattern="[1-9]" >
+          <input type="text" class="row8 column9 box9" maxlength="1" pattern="[1-9]"  value="3">
+        </div>
+        <div class="puzzleRow">
+          <input type="text" class="row9 column1 box7" maxlength="1" pattern="[1-9]" value="8">
+          <input type="text" class="row9 column2 box7" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row9 column3 box7" maxlength="1" pattern="[1-9]" >
+          <input type="text" class="row9 column4 box8" maxlength="1" pattern="[1-9]"value="6">
+          <input type="text" class="row9 column5 box8" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row9 column6 box8" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row9 column7 box9" maxlength="1" pattern="[1-9]" >
+          <input type="text" class="row9 column8 box9" maxlength="1" pattern="[1-9]">
+          <input type="text" class="row9 column9 box9" maxlength="1" pattern="[1-9]" value="4">
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="row center">
+      <button onclick="console.log(test('row'))">Row</button>
+      <button onclick="console.log(test('column'))">Column</button>
+      <button onclick="console.log(test('box'))">Box</button>
+      <button onclick="console.log(solve())">Solve</button>
+
+
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
